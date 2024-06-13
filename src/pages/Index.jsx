@@ -1,17 +1,29 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, SimpleGrid, Stat, StatLabel, StatNumber, VStack, Text, Heading } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container maxW="container.xl" p={4}>
+      <VStack spacing={4} align="stretch">
+        <Heading as="h1" size="xl" textAlign="center" mb={6}>
+          Business Dashboard
+        </Heading>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={4}>
+          <Stat>
+            <StatLabel>Sales</StatLabel>
+            <StatNumber>$50,000</StatNumber>
+          </Stat>
+          <Stat>
+            <StatLabel>Revenue</StatLabel>
+            <StatNumber>$120,000</StatNumber>
+          </Stat>
+          <Stat>
+            <StatLabel>Customers</StatLabel>
+            <StatNumber>1,200</StatNumber>
+          </Stat>
+        </SimpleGrid>
+        <Box p={4} bg="gray.100" borderRadius="md">
+          <Text fontSize="lg">Additional metrics and charts can be added here.</Text>
+        </Box>
       </VStack>
     </Container>
   );
